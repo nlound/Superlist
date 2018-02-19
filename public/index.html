@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Superlist</title>
+  <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="favicon.ico">
+  <link rel="stylesheet" href="main.css">
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+  <div id="container">
+    <h1>Superlist</h2>
+    <p><span id="counter">--</span> items on list</p>
+
+    <ul id="list">
+    </ul>
+  </div> 
+
+  <div id="modal" class="modal hide">
+    <input id="id_item" type="hidden" value="">
+    <div id="dropBox">Drop 320x320 image here</div> 
+    Description:<br>
+    <textarea id="picDescription" placeholder="Fill up description up to 300 characters" name="description" maxlength="300" rows="10" cols="40"></textarea><br>
+    <div id="submitButton">Submit</div>
+    <div id="cancelButton">Cancel</div>
+  </div>
+
+  <div id="addItem">Add New Item</div>
+<script src="main.js"></script>
+</body>
+</html>
+
+<!-- 
+Trash Icon Created by Christopher T. Howlett from the Noun Project
+Pencil Icon Created by Hare Krishna from the Noun Project
+-->
