@@ -2,13 +2,6 @@ html,
 body {
   font-family: Helvetica, sans-serif; }
 
-.header {
-  background: lightgrey;
-  border: 1px solid red;
-  widht: 100%;
-  text-align: left;
-  heigth: 150px; }
-
 #container {
   width: 90%;
   margin: 0 auto;
@@ -21,13 +14,20 @@ ul {
   width: 100%; }
 
 li {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
   margin-left: -40px;
   position: relative;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
   list-style-type: none;
   margin-bottom: 10px;
   min-height: 40px;
-  font-size: 0.75em; }
+  font-size: 0.75em;
+  padding: 5px; }
+  li:hover {
+    background-color: rgba(200, 200, 200, 0.1);
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3); }
   li img {
     float: left;
     width: 32px;
@@ -51,9 +51,31 @@ li {
                 box-sizing: border-box;
         border: 3px solid rgba(0, 0, 0, 0.2); }
     li .buttons .modify {
-      background: #9999ff url("icons/modify.svg") no-repeat; }
+      background: transparent url("icons/modify.svg") no-repeat; }
+      li .buttons .modify:hover:after {
+        content: "Modify";
+        font-size: 12px;
+        color: #CCCCCC;
+        width: 100px;
+        height: 100px;
+        float: left;
+        top: 30px;
+        left: 15px;
+        position: relative;
+        pointer-events: none; }
     li .buttons .delete {
-      background: #ff9999 url("icons/delete.svg") no-repeat; }
+      background: transparent url("icons/delete.svg") no-repeat; }
+      li .buttons .delete:hover:after {
+        content: "Delete";
+        font-size: 12px;
+        color: #FF9999;
+        width: 100px;
+        height: 100px;
+        float: left;
+        top: 30px;
+        left: -20px;
+        position: relative;
+        pointer-events: none; }
 
 .hide {
   display: none; }
@@ -68,17 +90,20 @@ li {
   text-align: center; }
 
 #dropBox {
+  border-radius: 30px;
   margin: 0 auto;
   width: 320px;
   height: 320px;
   line-height: 320px;
-  border: 5px dashed #CCCCCC; }
+  border: 5px dashed #CCCCCC;
+  margin-bottom: 20px; }
 
 #picDescription {
   margin: 0 auto;
   width: 323px;
   height: 200px;
-  border: 3px solid #CCCCCC; }
+  border: 3px solid #CCCCCC;
+  margin-bottom: 20px; }
 
 #addItem {
   margin: 50px auto;
